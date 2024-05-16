@@ -1,0 +1,28 @@
+C:\Users\ADMIN\OneDrive\Máy tính\PMQuanLiDaiLy\PMQuanLiDaiLy\bin\Debug\PMQuanLiDaiLy.exe.config
+C:\Users\ADMIN\OneDrive\Máy tính\PMQuanLiDaiLy\PMQuanLiDaiLy\bin\Debug\PMQuanLiDaiLy.exe
+C:\Users\ADMIN\OneDrive\Máy tính\PMQuanLiDaiLy\PMQuanLiDaiLy\bin\Debug\PMQuanLiDaiLy.pdb
+C:\Users\ADMIN\OneDrive\Máy tính\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.csproj.AssemblyReference.cache
+C:\Users\ADMIN\OneDrive\Máy tính\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.csproj.SuggestedBindingRedirects.cache
+C:\Users\ADMIN\OneDrive\Máy tính\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.Form1.resources
+C:\Users\ADMIN\OneDrive\Máy tính\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.Properties.Resources.resources
+C:\Users\ADMIN\OneDrive\Máy tính\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.csproj.GenerateResource.cache
+C:\Users\ADMIN\OneDrive\Máy tính\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\OneDrive\Máy tính\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.exe
+C:\Users\ADMIN\OneDrive\Máy tính\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.pdb
+C:\Users\ADMIN\OneDrive\Máy tính\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.FormTBTiepNhanDL.resources
+C:\Users\ADMIN\OneDrive\Máy tính\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.FormDangKi.resources
+C:\Users\ADMIN\OneDrive\Máy tính\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.FormDangNhap.resources
+E:\HK2 năm II\Nhập môn công nghệ phần mềm\Nhom7QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\bin\Debug\PMQuanLiDaiLy.exe.config
+E:\HK2 năm II\Nhập môn công nghệ phần mềm\Nhom7QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\bin\Debug\PMQuanLiDaiLy.exe
+E:\HK2 năm II\Nhập môn công nghệ phần mềm\Nhom7QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\bin\Debug\PMQuanLiDaiLy.pdb
+E:\HK2 năm II\Nhập môn công nghệ phần mềm\Nhom7QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.csproj.AssemblyReference.cache
+E:\HK2 năm II\Nhập môn công nghệ phần mềm\Nhom7QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.csproj.SuggestedBindingRedirects.cache
+E:\HK2 năm II\Nhập môn công nghệ phần mềm\Nhom7QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.Form1.resources
+E:\HK2 năm II\Nhập môn công nghệ phần mềm\Nhom7QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.FormDangKi.resources
+E:\HK2 năm II\Nhập môn công nghệ phần mềm\Nhom7QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.FormDangNhap.resources
+E:\HK2 năm II\Nhập môn công nghệ phần mềm\Nhom7QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.FormTBTiepNhanDL.resources
+E:\HK2 năm II\Nhập môn công nghệ phần mềm\Nhom7QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.Properties.Resources.resources
+E:\HK2 năm II\Nhập môn công nghệ phần mềm\Nhom7QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.csproj.GenerateResource.cache
+E:\HK2 năm II\Nhập môn công nghệ phần mềm\Nhom7QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.csproj.CoreCompileInputs.cache
+E:\HK2 năm II\Nhập môn công nghệ phần mềm\Nhom7QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.exe
+E:\HK2 năm II\Nhập môn công nghệ phần mềm\Nhom7QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.pdb
