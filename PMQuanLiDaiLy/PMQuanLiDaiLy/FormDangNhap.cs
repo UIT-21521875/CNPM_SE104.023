@@ -13,7 +13,7 @@ namespace PMQuanLiDaiLy
 {
     public partial class FormDangNhap : Form
     {
-        string chuoiketnoi = @"Data Source=LAPTOP-QU4ETMVH;Initial Catalog=QUANLIDAILY;Integrated Security=True";
+        string chuoiketnoi = @"Data Source=LAPTOP-98F0GEC3;Initial Catalog=QUANLIDAILY;Integrated Security=True";
         SqlConnection ketnoi;
         string sql;
         SqlCommand thuchien;

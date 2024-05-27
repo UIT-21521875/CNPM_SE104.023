@@ -26,3 +26,31 @@ E:\HK2 năm II\Nhập môn công nghệ phần mềm\Nhom7QLDL\PMQuanLiDaiLy\PMQ
 E:\HK2 năm II\Nhập môn công nghệ phần mềm\Nhom7QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.csproj.CoreCompileInputs.cache
 E:\HK2 năm II\Nhập môn công nghệ phần mềm\Nhom7QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.exe
 E:\HK2 năm II\Nhập môn công nghệ phần mềm\Nhom7QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.pdb
+C:\CNPM_Tuyen\CNPM\Nhập môn công nghệ phần mềm\Nhom7QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\bin\Debug\PMQuanLiDaiLy.exe.config
+C:\CNPM_Tuyen\CNPM\Nhập môn công nghệ phần mềm\Nhom7QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\bin\Debug\PMQuanLiDaiLy.exe
+C:\CNPM_Tuyen\CNPM\Nhập môn công nghệ phần mềm\Nhom7QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\bin\Debug\PMQuanLiDaiLy.pdb
+C:\CNPM_Tuyen\CNPM\Nhập môn công nghệ phần mềm\Nhom7QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.csproj.AssemblyReference.cache
+C:\CNPM_Tuyen\CNPM\Nhập môn công nghệ phần mềm\Nhom7QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.csproj.SuggestedBindingRedirects.cache
+C:\CNPM_Tuyen\CNPM\Nhập môn công nghệ phần mềm\Nhom7QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.Form1.resources
+C:\CNPM_Tuyen\CNPM\Nhập môn công nghệ phần mềm\Nhom7QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.FormDangKi.resources
+C:\CNPM_Tuyen\CNPM\Nhập môn công nghệ phần mềm\Nhom7QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.FormDangNhap.resources
+C:\CNPM_Tuyen\CNPM\Nhập môn công nghệ phần mềm\Nhom7QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.FormTBTiepNhanDL.resources
+C:\CNPM_Tuyen\CNPM\Nhập môn công nghệ phần mềm\Nhom7QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.Properties.Resources.resources
+C:\CNPM_Tuyen\CNPM\Nhập môn công nghệ phần mềm\Nhom7QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.csproj.GenerateResource.cache
+C:\CNPM_Tuyen\CNPM\Nhập môn công nghệ phần mềm\Nhom7QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.csproj.CoreCompileInputs.cache
+C:\CNPM_Tuyen\CNPM\Nhập môn công nghệ phần mềm\Nhom7QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.exe
+C:\CNPM_Tuyen\CNPM\Nhập môn công nghệ phần mềm\Nhom7QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.pdb
+C:\CNPM_Tuyen\CNPM\Nhập môn công nghệ phần mềm\Nhom9QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\bin\Debug\PMQuanLiDaiLy.exe.config
+C:\CNPM_Tuyen\CNPM\Nhập môn công nghệ phần mềm\Nhom9QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\bin\Debug\PMQuanLiDaiLy.exe
+C:\CNPM_Tuyen\CNPM\Nhập môn công nghệ phần mềm\Nhom9QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\bin\Debug\PMQuanLiDaiLy.pdb
+C:\CNPM_Tuyen\CNPM\Nhập môn công nghệ phần mềm\Nhom9QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.csproj.AssemblyReference.cache
+C:\CNPM_Tuyen\CNPM\Nhập môn công nghệ phần mềm\Nhom9QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.csproj.SuggestedBindingRedirects.cache
+C:\CNPM_Tuyen\CNPM\Nhập môn công nghệ phần mềm\Nhom9QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.Form1.resources
+C:\CNPM_Tuyen\CNPM\Nhập môn công nghệ phần mềm\Nhom9QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.FormDangKi.resources
+C:\CNPM_Tuyen\CNPM\Nhập môn công nghệ phần mềm\Nhom9QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.FormDangNhap.resources
+C:\CNPM_Tuyen\CNPM\Nhập môn công nghệ phần mềm\Nhom9QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.FormTBTiepNhanDL.resources
+C:\CNPM_Tuyen\CNPM\Nhập môn công nghệ phần mềm\Nhom9QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.Properties.Resources.resources
+C:\CNPM_Tuyen\CNPM\Nhập môn công nghệ phần mềm\Nhom9QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.csproj.GenerateResource.cache
+C:\CNPM_Tuyen\CNPM\Nhập môn công nghệ phần mềm\Nhom9QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.csproj.CoreCompileInputs.cache
+C:\CNPM_Tuyen\CNPM\Nhập môn công nghệ phần mềm\Nhom9QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.exe
+C:\CNPM_Tuyen\CNPM\Nhập môn công nghệ phần mềm\Nhom9QLDL\PMQuanLiDaiLy\PMQuanLiDaiLy\obj\Debug\PMQuanLiDaiLy.pdb

@@ -10,13 +10,14 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Text.RegularExpressions;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.Security.Cryptography;
 
 
 namespace PMQuanLiDaiLy
 {
     public partial class Form1 : Form
     {
-        string chuoiketnoi = @"Data Source=LAPTOP-QU4ETMVH;Initial Catalog=QUANLIDAILY;Integrated Security=True";
+        string chuoiketnoi = @"Data Source=LAPTOP-98F0GEC3;Initial Catalog=QUANLIDAILY;Integrated Security=True";
         SqlConnection ketnoi;
         string sql;
         SqlCommand thuchien;
@@ -192,13 +193,17 @@ namespace PMQuanLiDaiLy
             ketnoi.Open();
             thuchien = ketnoi.CreateCommand();
 
-            // Kiểm tra tên đại lý đã tồn tại hay chưa
-            thuchien.CommandText = "SELECT COUNT(*) FROM DAILY WHERE TenDaiLy = N'" + txTenDL.Text + "'";
-            int count = Convert.ToInt32(thuchien.ExecuteScalar());
+            // Kiểm tra xem đã có đại lý khác cùng tên trong cùng một quận chưa
+            string tenDaiLy = txTenDL.Text;
+            string maQuan = cbcQuan.SelectedValue.ToString();
+            thuchien.CommandText = "SELECT COUNT(*) FROM DAILY WHERE TenDaiLy = @TenDaiLy AND MaQuan = @MaQuan";
+            thuchien.Parameters.AddWithValue("@TenDaiLy", tenDaiLy);
+            thuchien.Parameters.AddWithValue("@MaQuan", maQuan);
+            int countSameNameDL = Convert.ToInt32(thuchien.ExecuteScalar());
 
-            if (count > 0)
+            if (countSameNameDL > 0)
             {
-                MessageBox.Show("Tên đại lý đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Trong cùng một quận không thể có hai đại lý cùng tên!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -327,7 +332,7 @@ namespace PMQuanLiDaiLy
                 adapter.Fill(dt);
                 dgvPXH.DataSource = dt;
 
-                sql = "select MaDaiLy, TenDaiLy, TienNo from DAILY where TienNo > 0";
+                sql = "select MaDaiLy, TenDaiLy, MaQuan, TienNo from DAILY where TienNo > 0";
                 adapter = new SqlDataAdapter(sql, ketnoi);
                 dt = new DataTable();
                 adapter.Fill(dt);
@@ -528,6 +533,16 @@ namespace PMQuanLiDaiLy
 
         private void btSuaMH_PNH_Click(object sender, EventArgs e)
         {
+            if (int.TryParse(txSLNhap.Text, out int soLuongNhap) && soLuongNhap <= 0)
+            {
+                MessageBox.Show("Số lượng nhập phải lớn hơn 0", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Dừng việc thực hiện nếu số lượng nhập nhỏ hơn 0
+            }
+            if (decimal.TryParse(txDonGiaNhap.Text, out decimal donGiaNhap) && donGiaNhap < 0)
+            {
+                MessageBox.Show("Đơn giá nhập không được nhỏ hơn 0", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Dừng việc thực hiện nếu đơn giá nhập nhỏ hơn 0
+            }
             ketnoi = new SqlConnection(chuoiketnoi);
             ketnoi.Open();
             thuchien = ketnoi.CreateCommand();
@@ -646,7 +661,14 @@ namespace PMQuanLiDaiLy
                     }
                     if (checkKhoangTT.Checked)
                     {
-                        sql += "AND TongTien >= '" + txTKTongTienmin.Text + "' AND TongTien <= '" + txTKTongTienmax.Text + "' ";
+                        if (!string.IsNullOrEmpty(txTKTongTienmin.Text))
+                        {
+                            sql += "AND TongTien >= " + txTKTongTienmin.Text.Replace("'", "''") + " ";
+                        }
+                        if (!string.IsNullOrEmpty(txTKTongTienmax.Text))
+                        {
+                            sql += "AND TongTien <= " + txTKTongTienmax.Text.Replace("'", "''") + " ";
+                        }
                     }
 
                     SqlDataAdapter adapter = new SqlDataAdapter(sql, ketnoi);
@@ -804,6 +826,16 @@ namespace PMQuanLiDaiLy
 
         private void btSuaMH_PXH_Click(object sender, EventArgs e)
         {
+            if (int.TryParse(txSLXuat.Text, out int soLuongXuat) && soLuongXuat <= 0)
+            {
+                MessageBox.Show("Số lượng xuất phải lớn hơn 0", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Dừng việc thực hiện nếu số lượng xuất nhỏ hơn 0
+            }
+            if (decimal.TryParse(txDonGiaXuat.Text, out decimal donGiaXuat) && donGiaXuat < 0)
+            {
+                MessageBox.Show("Đơn giá xuất không được nhỏ hơn 0", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Dừng việc thực hiện nếu đơn giá nhập nhỏ hơn 0
+            }
             ketnoi = new SqlConnection(chuoiketnoi);
             ketnoi.Open();
             thuchien = ketnoi.CreateCommand();
@@ -979,7 +1011,13 @@ namespace PMQuanLiDaiLy
                 string triggerErrorMessage = "Không thể tạo phiếu xuất hàng. Tiền Nợ vượt quá Số Nợ Tối Đa";
                 if (ex.Message.Contains(triggerErrorMessage))
                 {
-                    MessageBox.Show(triggerErrorMessage, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Lấy số tiền nợ hiện tại
+                    SqlCommand cmdCurrentDebt = new SqlCommand("SELECT TienNo FROM DAILY WHERE MaDaiLy = @MaDaiLy", ketnoi);
+                    cmdCurrentDebt.Parameters.AddWithValue("@MaDaiLy", cbcTK_DL_PXH.SelectedValue.ToString());
+                    decimal currentDebt = (decimal)cmdCurrentDebt.ExecuteScalar();
+
+                    // Hiển thị thông báo lỗi kèm số tiền nợ hiện tại
+                    MessageBox.Show(triggerErrorMessage + ". Hiện đang nợ: " + currentDebt.ToString() + " VNĐ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -1032,7 +1070,14 @@ namespace PMQuanLiDaiLy
                     }
                     if (checkKhoangTongTien.Checked)
                     {
-                        sql += "AND TongTien >= '" + txTKTongTienPXHmin.Text + "' AND TongTien <= '" + txTKTongTienPXHmax.Text + "' ";
+                        if (!string.IsNullOrEmpty(txTKTongTienPXHmin.Text))
+                        {
+                            sql += "AND TongTien >= '" + txTKTongTienPXHmin.Text.Replace("'", "''") + "' ";
+                        }
+                        if (!string.IsNullOrEmpty(txTKTongTienPXHmax.Text))
+                        {
+                            sql += "AND TongTien <= '" + txTKTongTienPXHmax.Text.Replace("'", "''") + "' ";
+                        }
                     }
 
                     SqlDataAdapter adapter = new SqlDataAdapter(sql, ketnoi);
@@ -1090,7 +1135,14 @@ namespace PMQuanLiDaiLy
             }
             if (checkKhoangSNTD.Checked)
             {
-                sql += "AND SoNoToiDa >= @SoNoToiDaMin AND SoNoToiDa <= @SoNoToiDaMax ";
+                if (!string.IsNullOrEmpty(txSoNoToiDamin_DS.Text))
+                {
+                    sql += "AND SoNoToiDa >= @SoNoToiDaMin ";
+                }
+                if (!string.IsNullOrEmpty(txSoNoToiDamax_DS.Text))
+                {
+                    sql += "AND SoNoToiDa <= @SoNoToiDaMax ";
+                }
             }
 
             SqlCommand command = new SqlCommand(sql, ketnoi);
@@ -1106,8 +1158,14 @@ namespace PMQuanLiDaiLy
             }
             if (checkKhoangSNTD.Checked)
             {
-                command.Parameters.AddWithValue("@SoNoToiDaMin", txSoNoToiDamin_DS.Text);
-                command.Parameters.AddWithValue("@SoNoToiDaMax", txSoNoToiDamax_DS.Text);
+                if (!string.IsNullOrEmpty(txSoNoToiDamin_DS.Text))
+                {
+                    command.Parameters.AddWithValue("@SoNoToiDaMin", txSoNoToiDamin_DS.Text);
+                }
+                if (!string.IsNullOrEmpty(txSoNoToiDamax_DS.Text))
+                {
+                    command.Parameters.AddWithValue("@SoNoToiDaMax", txSoNoToiDamax_DS.Text);
+                }
             }
 
             try
@@ -1532,9 +1590,16 @@ namespace PMQuanLiDaiLy
                     }
                     if (checkKhoangTN.Checked)
                     {
-                        sql += "AND TienNo >= @TongNoMin AND TienNo <= @TongNoMax ";
-                        parameters.Add(new SqlParameter("@TongNoMin", Convert.ToDecimal(txTongNomin_DS.Text)));
-                        parameters.Add(new SqlParameter("@TongNoMax", Convert.ToDecimal(txTongNomax_DS.Text)));
+                        if (!string.IsNullOrEmpty(txTongNomin_DS.Text))
+                        {
+                            sql += "AND TienNo >= @TongNoMin ";
+                            parameters.Add(new SqlParameter("@TongNoMin", Convert.ToDecimal(txTongNomin_DS.Text)));
+                        }
+                        if (!string.IsNullOrEmpty(txTongNomax_DS.Text))
+                        {
+                            sql += "AND TienNo <= @TongNoMax ";
+                            parameters.Add(new SqlParameter("@TongNoMax", Convert.ToDecimal(txTongNomax_DS.Text)));
+                        }
                     }
 
                     SqlDataAdapter adapter = new SqlDataAdapter(sql, ketnoi);
@@ -2084,7 +2149,14 @@ namespace PMQuanLiDaiLy
             }
             if (checkKhoangTienThu.Checked)
             {
-                sql += "AND SoTienThu >= '" + txSoTienThumin.Text + "' AND SoTienThu <= '" + txSoTienThumax.Text + "' ";
+                if (!string.IsNullOrEmpty(txSoTienThumin.Text))
+                {
+                    sql += "AND SoTienThu >= '" + txSoTienThumin.Text.Replace("'", "''") + "' ";
+                }
+                if (!string.IsNullOrEmpty(txSoTienThumax.Text))
+                {
+                    sql += "AND SoTienThu <= '" + txSoTienThumax.Text.Replace("'", "''") + "' ";
+                }
             }
 
             try
@@ -2127,10 +2199,12 @@ namespace PMQuanLiDaiLy
             {
                 DataGridViewRow selectedRow = dgvDSNo.SelectedRows[0];
                 string tenDaiLy = selectedRow.Cells["TenDaiLy"].Value.ToString();
+                string maQuan = selectedRow.Cells["MaQuan"].Value.ToString();
                 string tienNo = selectedRow.Cells["TienNo"].Value.ToString();
 
                 txTenDL_TT.Text = tenDaiLy;
                 txSoTT.Text = tienNo;
+                txMaQuan.Text = maQuan;
             }
         }
 
@@ -2152,7 +2226,7 @@ namespace PMQuanLiDaiLy
 
             thuchien = ketnoi.CreateCommand();
             thuchien.CommandText = "INSERT INTO PHIEUTHUTIEN (MaDaiLy, NgayThuTien, SoTienThu) " +
-                "VALUES ((SELECT MaDaiLy FROM DAILY WHERE TenDaiLy = N'" + txTenDL_TT.Text + "'), " +
+                "VALUES ((SELECT MaDaiLy FROM DAILY WHERE TenDaiLy = N'" + txTenDL_TT.Text + "' AND MaQuan = N'" + txMaQuan.Text + "' ), " +
                 "'" + dateNgayTT.Value.ToString("yyyy-MM-dd HH:mm:ss") + "', '" + txSoTT.Text + "')";
 
             try
@@ -2529,32 +2603,60 @@ namespace PMQuanLiDaiLy
 
         private void btLuuSDLTD_Click(object sender, EventArgs e)
         {
-            string sql = "update THAMSO set SoDaiLyToiDa = @SoDaiLyToiDa";
-
-            using (SqlConnection ketnoi = new SqlConnection(chuoiketnoi))
+            try
             {
-                ketnoi.Open();
-
-                using (SqlCommand thuchien = new SqlCommand(sql, ketnoi))
+                int soDaiLyToiDa;
+                if (!int.TryParse(txSuaSDLTD.Text, out soDaiLyToiDa))
                 {
-                    int soDaiLyToiDa;
-                    if (int.TryParse(txSuaSDLTD.Text, out soDaiLyToiDa))
-                    {
-                        thuchien.Parameters.AddWithValue("@SoDaiLyToiDa", soDaiLyToiDa);
-                        thuchien.ExecuteNonQuery();
-                        MessageBox.Show("Lưu thành công!");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Vui lòng nhập số nguyên hợp lệ!");
-                    }
+                    MessageBox.Show("Vui lòng nhập số nguyên hợp lệ!");
+                    return;
                 }
 
-                Form1_Load(sender, e);
+                using (SqlConnection ketnoi = new SqlConnection(chuoiketnoi))
+                {
+                    ketnoi.Open();
 
-                ketnoi.Close();
+                    // Lấy số đại lý tối đa trong mỗi quận
+                    string sqlCountDL = "SELECT MaQuan, COUNT(*) AS SoDaiLy FROM DAILY GROUP BY MaQuan";
+                    SqlCommand commandCountDL = new SqlCommand(sqlCountDL, ketnoi);
+                    SqlDataReader readerCountDL = commandCountDL.ExecuteReader();
+
+                    int maxSoDaiLy = 0;
+                    while (readerCountDL.Read())
+                    {
+                        int soDaiLy = Convert.ToInt32(readerCountDL["SoDaiLy"]);
+                        if (soDaiLy > maxSoDaiLy)
+                        {
+                            maxSoDaiLy = soDaiLy;
+                        }
+                    }
+                    readerCountDL.Close();
+
+                    // Kiểm tra xem số lượng đại lý tối đa của quận đang cập nhật có nhỏ hơn số lượng đại lý tối đa nhất không
+                    if (maxSoDaiLy > soDaiLyToiDa)
+                    {
+                        MessageBox.Show("Số lượng đại lý tối đa trong quận đang cập nhật không thể nhỏ hơn số lượng đại lý tối đa trong một quận khác", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    // Tiến hành cập nhật số đại lý tối đa nếu không có vấn đề gì
+                    string sqlUpdate = "UPDATE THAMSO SET SoDaiLyToiDa = @SoDaiLyToiDa";
+                    using (SqlCommand commandUpdate = new SqlCommand(sqlUpdate, ketnoi))
+                    {
+                        commandUpdate.Parameters.AddWithValue("@SoDaiLyToiDa", soDaiLyToiDa);
+                        commandUpdate.ExecuteNonQuery();
+                        MessageBox.Show("Lưu thành công!");
+                    }
+
+                    ketnoi.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void btLuuTLDG_Click(object sender, EventArgs e)
         {
@@ -3505,6 +3607,10 @@ namespace PMQuanLiDaiLy
             }
         }
 
+        private void groupBox7_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

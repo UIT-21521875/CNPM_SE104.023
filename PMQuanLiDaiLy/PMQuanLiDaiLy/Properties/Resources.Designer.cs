@@ -133,6 +133,17 @@ namespace PMQuanLiDaiLy.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Ghost_in_the_Shell__Section_9_Back_Patch_28cm___2_Small_Front_Pocket_Arm_Logos_Cosplay_Costume_Patch___Etsy_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("Ghost_in_the_Shell__Section_9_Back_Patch_28cm___2_Small_Front_Pocket_Arm_Logos_Co" +
+                        "splay_Costume_Patch_-_Etsy-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap home__1_ {
             get {
                 object obj = ResourceManager.GetObject("home (1)", resourceCulture);
@@ -196,6 +207,16 @@ namespace PMQuanLiDaiLy.Properties {
         internal static System.Drawing.Bitmap pencil__1_ {
             get {
                 object obj = ResourceManager.GetObject("pencil (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Premium_Vector___Abstract_background_of_blue_frame_hud_ui_technology_line {
+            get {
+                object obj = ResourceManager.GetObject("Premium Vector _ Abstract background of blue frame hud ui technology line", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

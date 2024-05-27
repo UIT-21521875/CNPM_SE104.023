@@ -37,7 +37,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.panel1.BackColor = System.Drawing.Color.Navy;
             this.panel1.Location = new System.Drawing.Point(24, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(12, 324);
@@ -46,49 +46,49 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(79, 116);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(42, 116);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(425, 32);
+            this.label1.Size = new System.Drawing.Size(443, 35);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Tiếp nhận đại lý thành công !!!";
+            this.label1.Text = "TIẾP NHẬN ĐẠI LÝ THÀNH CÔNG !!!";
             // 
             // btThemDLkhac
             // 
-            this.btThemDLkhac.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btThemDLkhac.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThemDLkhac.BackColor = System.Drawing.Color.Navy;
+            this.btThemDLkhac.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThemDLkhac.ForeColor = System.Drawing.Color.White;
             this.btThemDLkhac.Location = new System.Drawing.Point(42, 224);
             this.btThemDLkhac.Name = "btThemDLkhac";
             this.btThemDLkhac.Size = new System.Drawing.Size(154, 64);
             this.btThemDLkhac.TabIndex = 2;
-            this.btThemDLkhac.Text = "Thêm đại lý khác";
+            this.btThemDLkhac.Text = "THÊM ĐẠI LÝ KHÁC";
             this.btThemDLkhac.UseVisualStyleBackColor = false;
             this.btThemDLkhac.Click += new System.EventHandler(this.btThemDLkhac_Click);
             // 
             // btDLDS
             // 
-            this.btDLDS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btDLDS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDLDS.BackColor = System.Drawing.Color.Navy;
+            this.btDLDS.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDLDS.ForeColor = System.Drawing.Color.White;
             this.btDLDS.Location = new System.Drawing.Point(202, 224);
             this.btDLDS.Name = "btDLDS";
             this.btDLDS.Size = new System.Drawing.Size(168, 64);
             this.btDLDS.TabIndex = 3;
-            this.btDLDS.Text = "Xem danh sách";
+            this.btDLDS.Text = "XEM DANH SÁCH";
             this.btDLDS.UseVisualStyleBackColor = false;
             this.btDLDS.Click += new System.EventHandler(this.btDLDS_Click);
             // 
             // btDLTC
             // 
-            this.btDLTC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btDLTC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDLTC.BackColor = System.Drawing.Color.Navy;
+            this.btDLTC.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDLTC.ForeColor = System.Drawing.Color.White;
             this.btDLTC.Location = new System.Drawing.Point(376, 224);
             this.btDLTC.Name = "btDLTC";
             this.btDLTC.Size = new System.Drawing.Size(154, 64);
             this.btDLTC.TabIndex = 4;
-            this.btDLTC.Text = "Trang chủ";
+            this.btDLTC.Text = "TRANG CHỦ";
             this.btDLTC.UseVisualStyleBackColor = false;
             this.btDLTC.Click += new System.EventHandler(this.btDLTC_Click);
             // 

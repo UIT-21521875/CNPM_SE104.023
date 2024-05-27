@@ -253,5 +253,11 @@
   <ItemGroup>
     <None Include="Resources\bearlogo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ghost_in_the_Shell__Section_9_Back_Patch_28cm___2_Small_Front_Pocket_Arm_Logos_Cosplay_Costume_Patch_-_Etsy-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Premium Vector _ Abstract background of blue frame hud ui technology line.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

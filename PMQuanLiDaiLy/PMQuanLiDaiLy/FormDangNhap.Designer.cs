@@ -42,19 +42,19 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.MenuText;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label1.Location = new System.Drawing.Point(382, 25);
+            this.label1.Location = new System.Drawing.Point(407, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 41);
+            this.label1.Size = new System.Drawing.Size(200, 41);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Đăng nhập";
+            this.label1.Text = "ĐĂNG NHẬP";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.Desktop;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label2.Location = new System.Drawing.Point(301, 211);
@@ -66,7 +66,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.Desktop;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label3.Location = new System.Drawing.Point(301, 281);
@@ -120,11 +120,11 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::PMQuanLiDaiLy.Properties.Resources.bearlogo;
-            this.pictureBox1.Location = new System.Drawing.Point(405, 91);
+            this.pictureBox1.Image = global::PMQuanLiDaiLy.Properties.Resources.Ghost_in_the_Shell__Section_9_Back_Patch_28cm___2_Small_Front_Pocket_Arm_Logos_Cosplay_Costume_Patch___Etsy_removebg_preview;
+            this.pictureBox1.Location = new System.Drawing.Point(446, 88);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(113, 103);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
@@ -132,7 +132,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PMQuanLiDaiLy.Properties.Resources._2029165;
+            this.BackgroundImage = global::PMQuanLiDaiLy.Properties.Resources.Premium_Vector___Abstract_background_of_blue_frame_hud_ui_technology_line;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(946, 516);
             this.Controls.Add(this.pictureBox1);
